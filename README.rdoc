@@ -1,5 +1,6 @@
 == README
 
 This is my first Ruby on Rails mock app.
-I created for educational purposes only.
+I created it for educational purposes only.
+Nothing to brag about.
 
