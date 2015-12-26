@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Alpha-blog | Home</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!--<link rel="stylesheet" href="../../assets/stylesheets/style.css">-->
+</head>
+<body>
+
+ <div class="container">
+     <h1>Listing all articles</h1>
+     <p>
+         <%= link_to "Create new article", new_article_path %>
+     </p>
+     <table>
+         <tr>
+             <th>Title</th>
+             <th>Description</th>
+         </tr>
+         <% @articles.each do |article| %>
+         <tr>
+             <td><%= article.title %></td>
+             <td><%= article.description %></td>
+             <td><%= link_to 'Edit', edit_article_path(article) %></td>
+             <td><%= link_to 'Show', article_path(article) %></td>
+             <td><%= link_to 'Delete', article_path(article), method: :delete, data: {confirm: "Are you sure?"} %></td>
+         </tr>
+         <% end %>
+</table>
+</div>    
+</body>
+</html>

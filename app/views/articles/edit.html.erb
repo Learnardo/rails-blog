@@ -9,19 +9,15 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <!--<link rel="stylesheet" href="../../assets/stylesheets/style.css">-->
 </head>
-<body>    
+<body>
 
  <div class="container">
-     <h1>Showing selected article</h1>
-     <p>
-         Title: <%= @article.title %>
-     </p>
-     <p>
-         Description: <%= @article.description %>
-     </p>
-     <%= link_to "Edit this article", edit_article_path(@article) %> |
-     <%= link_to "Back to articles listing", articles_path %>
-
+     <h1>Edit existing article</h1>
+     <% if @article.errors.any? %>
+     <h2>The following errors prevented the article from getting created</h2>
+     <% end %>
+           <%= render 'form' %>
+     
 </div>    
 </body>
 </html>
