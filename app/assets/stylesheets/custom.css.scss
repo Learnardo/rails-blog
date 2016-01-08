@@ -52,12 +52,19 @@ margin-left: 15px;
 }
 
 .article-actions {
+/*border-top: 1px solid #eaeaea;
+padding-top: 5px;*/
+margin-top:-10px;
+    float:left;
+}
+
+.article-meta-details {
 border-top: 1px solid #eaeaea;
-padding-top: 5px;
-    float:right;
+margin-top: 15px;
 }
 
 .article-title {
+    margin-top:-10px;
 font-weight: bold;
 font-size: 1.5em;
 }
