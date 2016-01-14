@@ -9,7 +9,7 @@ $navbar-default-bg: black;
 }
 
 .jumbotron {
-    background-image: asset-url('texture.jpeg');
+    background-color: #C0C0C0;
     background-size: cover;
 }
 
@@ -78,4 +78,8 @@ padding-bottom: 15px;
 .listing {
 list-style: none;
 padding-left: 0;
+}
+
+.navbar {
+    border-radius: 0;
 }
